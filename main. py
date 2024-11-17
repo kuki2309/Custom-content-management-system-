@@ -1,0 +1,105 @@
+posts = []
+
+def display_posts():
+    """Display all posts."""
+    if not posts:
+        print("No posts available.")
+    else:
+        for i, post in enumerate(posts, 1):
+            print(f"{i}. {post['title']}: {post['content']}")
+
+def add_post():
+    """Add a new post."""
+    title = input("Enter the title of your post: ")
+    content = input("Enter the content of your post: ")
+    posts.append({"title": title, "content": content})
+    print("Post added successfully!")
+
+def delete_post():
+    """Delete a post by number."""
+    display_posts()
+    try:
+        post_number = int(input("Enter the post number to delete: "))
+        if 0 < post_number <= len(posts):
+            deleted_post = posts.pop(post_number - 1)
+            print(f"Post '{deleted_post['title']}' deleted successfully!")
+        else:
+            print("Invalid post number.")
+    except ValueError:
+        print("Please enter a valid number.")
+
+def main():
+    """Main menu for the CMS."""
+    while True:
+        print("\nSimple CMS")
+        print("1. View Posts")
+        print("2. Add Post")
+        print("3. Delete Post")
+        print("4. Exit")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            display_posts()
+        elif choice == "2":
+            add_post()
+        elif choice == "3":
+            delete_post()
+        elif choice == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()posts = []
+
+def display_posts():
+    """Display all posts."""
+    if not posts:
+        print("No posts available.")
+    else:
+        for i, post in enumerate(posts, 1):
+            print(f"{i}. {post['title']}: {post['content']}")
+
+def add_post():
+    """Add a new post."""
+    title = input("Enter the title of your post: ")
+    content = input("Enter the content of your post: ")
+    posts.append({"title": title, "content": content})
+    print("Post added successfully!")
+
+def delete_post():
+    """Delete a post by number."""
+    display_posts()
+    try:
+        post_number = int(input("Enter the post number to delete: "))
+        if 0 < post_number <= len(posts):
+            deleted_post = posts.pop(post_number - 1)
+            print(f"Post '{deleted_post['title']}' deleted successfully!")
+        else:
+            print("Invalid post number.")
+    except ValueError:
+        print("Please enter a valid number.")
+
+def main():
+    """Main menu for the CMS."""
+    while True:
+        print("\nSimple CMS")
+        print("1. View Posts")
+        print("2. Add Post")
+        print("3. Delete Post")
+        print("4. Exit")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            display_posts()
+        elif choice == "2":
+            add_post()
+        elif choice == "3":
+            delete_post()
+        elif choice == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
